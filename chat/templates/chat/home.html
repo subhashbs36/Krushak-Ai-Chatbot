@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Government Schemes</title>
+    <link rel="stylesheet" href="{% static 'chat/css/highlight.min.css' %}">
+    <link rel="stylesheet" href="{% static 'chat/css/index.css' %}">
+    <link rel="icon" href="{% static 'chat/img/favicon.ico' %}" />
+    <!-- Include any necessary CSS styles or links here -->
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'chat/img/chatgpt.png' %}" alt="KrushakAI Logo">
+            </div>
+                <b>KrushakAI</b> 
+            <div class="home-button">
+                <a href="#">Home</a>
+                <a href="/loan">Govt Schemes</a>
+                <a href="/">Chat</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </header>
+    <div class="form-container">
+        <h1>Government Schemes</h1>
+
+    </div>
+
+
+
+
+    <style>
+
+    #page_title{ 
+        text-align: center;
+    }   
+
+    .resized-image {
+    max-width: 20%;
+    height: auto;
+    }
+
+    .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(rgba(24, 74, 31, 0.926), rgba(255, 255, 255, 0.8));
+    color: white; /* Set text color to white */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+/* Apply responsive styling for header content */
+@media screen and (max-width: 768px) {
+    .header-content {
+        font-size: 20px; /* Adjust the font size for smaller screens */
+        padding: 0 10px; /* Adjust the padding for smaller screens */
+    }
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.home-button a {
+    color:rgba(255, 255, 255, 0.926);
+    text-decoration: none;
+    padding-right: 25px;
+}
+
+main {
+    padding-top: 60px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust header font size and padding for smaller screens */
+    .header-content {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+    
+    /* Reduce logo size for smaller screens */
+    .logo img {
+        width: 30px;    
+    }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.8), rgba(24, 74, 31, 0.926));
+    color: white;
+}
+
+.form-container h1{
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+.loan-form {
+    background-color: rgba(24, 74, 31, 0.926);
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 50%; /* Adjust the width as needed */
+    padding-right: 6%;
+    margin-left: 10%;
+    margin: 10%;
+}
+
+.loan-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.loan-form input,
+.loan-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: rgba(72, 142, 77, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.loan-schemes {
+    background-image: linear-gradient(rgba(30, 29, 29, 0.8), rgba(24, 74, 31, 0.926));
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px auto; /* Center the content horizontally */
+    width: 70%;
+}
+
+.loan-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid white;
+    margin-top: 10px;
+}
+
+.loan-table th,
+.loan-table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+
+.loan-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+
+
+
+    </style>
+</body>
+</html>

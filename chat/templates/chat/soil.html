@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- The rest of your HTML structure remains the same -->
+
+<div class="form-container">
+    <h1>Crops Information</h1>
+    <form class="crop-form" method="post" action="{% url 'crop_form' %}">
+        {% csrf_token %}
+        <label for="name">Enter City/Town/Village/State</label>
+        <input type="text" id="name" name="name" required>
+        <input class="submit-button" type="submit" value="Submit">
+    </form>
+</div>
+
+{% if crops %}
+<div class="crop-info">
+    <h2>Crops Information</h2>
+    <table class="crop-table">
+        <thead>
+            <tr>
+                <th>Crop Name</th>
+                <th>Profitability</th>
+                <th>Cost</th>
+                <th>Market Demand</th>
+                <th>Ease of Growing</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for crop in crops %}
+            <tr>
+                <td>{{ crop.cropname }}</td>
+                <td>{{ crop.profitability }}</td>
+                <td>{{ crop.cost }}</td>
+                <td>{{ crop.market_demand }}</td>
+                <td>{{ crop.ease_of_growing }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+<!-- Rest of the HTML content and styles remain the same -->

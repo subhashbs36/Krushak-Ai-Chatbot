@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <title>KrushakAI</title>
+    <link rel="stylesheet" href="{% static 'chat/css/highlight.min.css' %}">
+    <link rel="stylesheet" href="{% static 'chat/css/index.css' %}">
+    <link rel="icon" href="{% static 'chat/img/favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="KrushakAI" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'chat/img/chatgpt.png' %}" alt="KrushakAI Logo">
+            </div>
+                <b>KrushakAI</b> 
+            <div class="home-button">
+                <a href="#">Home</a>
+                <a href="/loan">Govt Schemes</a>
+                <a href="/">Chat</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </header>
+    <div id="response-list">
+    </div>
+    <div id="bottom-container">
+        <div id="regenerate-button-container">
+            <button id="regenerate-response-button">
+                Regenerate Response
+            </button>
+        </div>
+        <div id="input-container">
+            <div id="prompt-input" contentEditable></div>
+            <button id="submit-button"></button>
+        </div>
+    </div>
+    <script src="{% static 'chat/js/highlight.min.js' %}"></script>
+    <script src="{% static 'chat/js/showdown.min.js' %}"></script>
+    <script src="{% static 'chat/js/index.js' %}"></script>
+
+    <style>
+        .resized-image {
+        max-width: 20%;
+        height: auto;
+        }
+
+        .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(rgba(24, 74, 31, 0.926), rgba(255, 255, 255, 0.8));
+    color: white; /* Set text color to white */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+/* Apply responsive styling for header content */
+@media screen and (max-width: 768px) {
+    .header-content {
+        font-size: 20px; /* Adjust the font size for smaller screens */
+        padding: 0 10px; /* Adjust the padding for smaller screens */
+    }
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.home-button a {
+    color:rgba(255, 255, 255, 0.926);
+    text-decoration: none;
+    padding-right: 25px;
+}
+
+main {
+    padding-top: 60px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Adjust header font size and padding for smaller screens */
+    .header-content {
+        font-size: 10px;
+        padding: 0 10px;
+    }
+    
+    /* Reduce logo size for smaller screens */
+    .logo img {
+        width: 30px;
+    }
+}
+
+    </style>
+</body>
+
+</html>
