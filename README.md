@@ -54,7 +54,9 @@ To set up the chatbot locally, follow these steps:
    ```bash
     pip install -r requirements.txt
 
-4. Set up the Django server:
+4. Put Bard and Twillo API Key
+
+5. Set up the Django server:
 
     ```bash
     python manage.py migrate
