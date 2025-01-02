@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
 <head>
-    <title>Government Schemes</title>
-    <link rel="stylesheet" href="{% static 'chat/css/highlight.min.css' %}">
-    <link rel="stylesheet" href="{% static 'chat/css/index.css' %}">
-    <link rel="icon" href="{% static 'chat/img/favicon.ico' %}" />
-    <!-- Include any necessary CSS styles or links here -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KrushakAI</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="{% static 'chat/img/chatgpt.png' %}" alt="KrushakAI Logo">
-            </div>
-                <b>KrushakAI</b> 
-            <div class="home-button">
-                <a href="#">Home</a>
-                <a href="/loan">Govt Schemes</a>
-                <a href="/">Chat</a>
-                <a href="#">About</a>
-            </div>
+  <header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <img src="{% static 'chat/img/chatgpt.png' %}" alt="KrushakAI Logo">
         </div>
-    </header>
-    <div class="form-container">
-        <h1>Government Schemes</h1>
-
+            <b>KrushakAI</b> 
+        <div class="home-button">
+            <a href="/home">Home</a>
+            <a href="/loan">Govt Schemes</a>
+            <a href="/">Chat</a>
+            <a href="#">About</a>
+        </div>
     </div>
+</header>
+  <div class="parallax-container" style="background-image: url('{% static 'chat/img/5.jpg' %}');">
+    <div class="parallax-content">
+      
+    </div>
+  </div>
 
+  <div class="division">
+    <div class="inner-division inner-division1"></div>
+    <div class="text-right">
+      <p>Line 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Line 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
 
+  <div class="division">
+    <div class="inner-division inner-division2"></div>
+    <div class="text-left">
+      <p>Line 1: Vivamus a nunc et tortor iaculis fringilla.</p>
+      <p>Line 2: Curabitur non libero at quam tristique consequat.</p>
+    </div>
+  </div>
 
+  <div class="division">
+    <div class="inner-division inner-division3"></div>
+    <div class="text-right">
+      <p>Line 1: Proin sed justo non leo sagittis finibus.</p>
+      <p>Line 2: Nulla facilisi. Etiam commodo mi eget pharetra enim.</p>
+    </div>
+  </div>
 
-    <style>
+  <div class="division">
+    <div class="inner-division inner-division4"></div>
+    <div class="text-left">
+      <p>Line 1: Aliquam sollicitudin diam eget justo elementum, at tempus libero blandit.</p>
+      <p>Line 2: In in augue interdum, efficitur urna nec, consequat erat.</p>
+    </div>
+  </div>
 
-    #page_title{ 
-        text-align: center;
-    }   
+  <div class="division">
+    <div class="inner-division inner-division5"></div>
+    <div class="text-right">
+      <p>Line 1: Phasellus euismod mauris ac varius eleifend.</p>
+      <p>Line 2: Fusce interdum libero nec est facilisis, ut fermentum libero dictum.</p>
+    </div>
+  </div>
 
-    .resized-image {
-    max-width: 20%;
-    height: auto;
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
     }
 
     .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-image: linear-gradient(rgba(24, 74, 31, 0.926), rgba(255, 255, 255, 0.8));
-    color: white; /* Set text color to white */
+    background-image: linear-gradient(to left, rgba(24, 74, 31, 0.926), rgba(24, 74, 31, 0.926), rgba(255, 255, 255, 0.8));
+    color: white;
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    z-index: 1000; /* Ensure the header is above other content */
+  }
 
 .header-content {
     display: flex;
@@ -79,6 +112,7 @@
     color:rgba(255, 255, 255, 0.926);
     text-decoration: none;
     padding-right: 25px;
+    font-size: medium;
 }
 
 main {
@@ -95,91 +129,82 @@ main {
     
     /* Reduce logo size for smaller screens */
     .logo img {
-        width: 30px;    
+        width: 30px;
     }
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: linear-gradient( rgba(255, 255, 255, 0.8), rgba(24, 74, 31, 0.926));
-    color: white;
-}
 
-.form-container h1{
-    font-size: 35px;
-    margin-left: 10%;
-}
-
-.loan-form {
-    background-color: rgba(24, 74, 31, 0.926);
-    padding: 3%;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 50%; /* Adjust the width as needed */
-    padding-right: 6%;
-    margin-left: 10%;
-    margin: 10%;
-}
-
-.loan-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.loan-form input,
-.loan-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.submit-button {
-    background-color: rgba(72, 142, 77, 0.8);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-.loan-schemes {
-    background-image: linear-gradient(rgba(30, 29, 29, 0.8), rgba(24, 74, 31, 0.926));
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 10px auto; /* Center the content horizontally */
-    width: 70%;
-}
-
-.loan-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid white;
-    margin-top: 10px;
-}
-
-.loan-table th,
-.loan-table td {
-    border: 1px solid white;
-    padding: 10px;
-    text-align: left;
-}
-
-.loan-table th {
-    background-color: rgba(255, 255, 255, 0.1);
-    font-weight: bold;
-}
+    .parallax-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .parallax-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 0;
+      width: 100%;
+      text-align: center;
+      color: #fff;
+    }
+    .division {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 0.2s ease-in-out;
+      position: relative;
+    }
+    .inner-division {
+      border-style: solid;
+      border-radius: 25px;
+      border-color: brown;
+      width: 30%;
+      height: 10%;
+      padding-bottom: 300px;
+      background-color: transparent;
+      position: absolute;
+      background-image: url('{% static "chat/img/5.jpg" %}');
+    }
+    .inner-division1, .inner-division3, .inner-division5 {
+      left: 0;
+    }
+    .inner-division2, .inner-division4 {
+      right: 0;
+    }
+    .division:nth-child(odd) {
+      background-image: url('{% static "chat/img/1.jpg" %}');
+    }
+    .division:nth-child(even) {
+      background-image: url('{% static "chat/img/2.jpg" %}');
+    }
+    .text-right {
+      position: absolute;
+      left: 35%;
+      text-align: left;
+    }
+    .text-left {
+      position: absolute;
+      right: 35%;
+      text-align: right;
+    }
 
 
+  </style>
 
-
-    </style>
 </body>
 </html>

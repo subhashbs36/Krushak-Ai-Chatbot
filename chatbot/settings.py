@@ -26,6 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
+# Access the GEMINI_API_KEY from environment variables
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -80,9 +83,9 @@ WSGI_APPLICATION = 'chatbot.wsgi.application'
 
 
 #twillio configurations
-TWILIO_ACCOUNT_SID = ''
-TWILIO_AUTH_TOKEN = ''
-TWILIO_WHATSAPP_NUMBER = ''
+TWILIO_ACCOUNT_SID = '###'
+TWILIO_AUTH_TOKEN = '####'
+TWILIO_WHATSAPP_NUMBER = 'whatsapp:#####'
 
 
 # Database

@@ -19,7 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.urls')),
-    path('whatsapp/', include('whatsappbot.urls')),
+    # path('whatsapp/', include('whatsappbot.urls')),
     path('', include('chat.urls')),
 
 ]
